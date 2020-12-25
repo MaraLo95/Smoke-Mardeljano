@@ -5,9 +5,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
 
 
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/ghoust/GhoustSolid.otf);
+}
 
 body {
-  background: #fff;
+  background: #0a0908;
   color: #666666;
   font-family: "Open Sans", sans-serif;
 }
@@ -34,67 +38,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-
-
-.concert-content {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 10vh;
-  background-color: black;
-}
-
-
-/*.concert-content .left-text {
-  margin-top: 25px;
-}
-*/
-.concert-content .left-text h4 {
-  font-size: 24px;
-  font-weight: 500;
-  color: #fff;
-}
-
-h4, .h4 {
-  font-size: 18px;
-}
-
-.concert-content .left-text .line-dec {
-  width: 45px;
-  height: 3px;
-  background-color: #ff7d27;
-  margin: 20px 0px 40px 0px;
-}
-
-.concert-content .left-text p {
-  color: #fff;
-}
-
-
-.concert-content .line-dec {
-  width: 45px;
-  height: 3px;
-  background-color: #ff7d27;
-  margin: 20px auto 15px auto;
-}
-
-.concert {
-  width: 90%;
-  margin-left: 50px;
-  margin-bottom: 30px;
-  border-radius: 4%;
-}
-
-
-.concert td {
-  padding:  15px;
-}
-
-.concert th {
-  padding-top: 15px;
-  font-size: 16px;
-  padding-left: 25px;
-  padding-bottom: 15px;
-}
 /* Back to top button */
 .back-to-top {
   position: fixed;
@@ -139,7 +82,7 @@ h4, .h4 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  padding: 30px 0;
+  padding: 20px 0;
   height: 92px;
   position: fixed;
   left: 0;
@@ -147,18 +90,18 @@ h4, .h4 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
-  background: black;
+  background: #0a0908;
 }
 
 #header #logo {
   float: left;
- margin-left: -60px;
+  margin-left: -30px;
 }
 
 
 #header #logo img {
-  width: 100px;
-  height: 60px;
+  width: 120px;
+  height: 80px;
   
 }
 
@@ -175,12 +118,31 @@ h4, .h4 {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  #header #logo  {
+   margin-left: -220px;
+  }
+  #header #logo img {
+    max-height: 85px;
+    max-width: 120px;
+  }
+}
+ @media only screen and (min-width: 2000px) {
+ #header #logo  {
+   margin-left: -680px;
+  }
+   #header #logo img {
+    max-height: 85px;
+    max-width: 120px;
+  }
+    }
+
 #header.header-transparent {
   background: transparent;
 }
 
 #header.header-fixed {
-  background: black;
+  background: #0a0908;
   padding: 20px 0;
   height: 72px;
   transition: all 0.5s;
@@ -372,10 +334,10 @@ h4, .h4 {
   text-decoration: none;
   display: inline-block;
   color: yellow;
-  font-family: "Poppins", sans-serif;
+  font-family: "myFirstFont";
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 18px;
   outline: none;
 }
 
@@ -433,6 +395,32 @@ h4, .h4 {
   margin: 0;
 }
 
+@media only screen and (min-width: 1440px) {
+  .nav-menu a {
+  padding: 0 10px 12px 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 22px;
+ }
+}
+
+ @media only screen and (min-width: 2000px) {
+  .nav-menu a {
+  padding: 0 10px 12px 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+  .nav-menu ul ul {
+  margin-right: 30px;
+}
+ .main-header {
+  margin-right: 30px;
+ }
+}
+
+
+
 /* Mobile Nav Toggle */
 #mobile-nav-toggle {
   position: fixed;
@@ -458,6 +446,7 @@ h4, .h4 {
     display: inline;
   }
 }
+
 
 /* Mobile Nav Styling */
 #mobile-nav {
@@ -681,13 +670,13 @@ section {
 /* About Us Section
 --------------------------------*/
 #about {
-  background: rgba(52, 59, 64, 0.9);
-  padding: 80px 0;
+  background: #0a0908;
+  padding: 60px 0;
 }
 
 #about .about-container .background {
   min-height: 300px;
-  background: url(../img/about2.jpg);
+  background-image: url(../img/biography.jpg);
   margin-bottom: 10px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -695,10 +684,12 @@ section {
 
 
 #about .about-container .title {
-  color: #F1F3F3;
-  font-weight: 700;
-  font-size: 32px;
+  color: white;
+  font-weight: 500;
+  font-size: 38px;
+  font-family: "myFirstFont"
 }
+
 
 @media (max-width: 768px) {
   #about .about-container .title {
@@ -707,11 +698,37 @@ section {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .about-container {
+    width: 1200px;
+    margin-left: -80px;
+  }
+  .biography p {
+    padding-right: 30px;
+  }
+}
+
+ @media only screen and (min-width: 2000px) {
+  .about-container {
+    width: 1400px;
+    margin-left: -80px;
+  }
+  .title p {
+    padding-right: 20px;
+  }
+}
+
+
 #about .about-container p {
   line-height: 26px;
   color: white;
+  text-align: justify;
+  font-size: 18px;
+  font-weight: 100px;
 
 }
+
+
 
 #about .about-container .content p {
   text-align: justify;
@@ -767,6 +784,8 @@ section {
   font-size: 14px;
 }
 
+
+
 /* Facts Section
 --------------------------------*/
 #facts {
@@ -783,30 +802,13 @@ section {
 
 /* Services Section
 --------------------------------*/
-/*#services {
-  background: #fff;
-  background-size: cover;
-  padding: 80px 0 60px 0;
-}
-
-#services .box {
-  padding: 50px 20px;
-  margin-bottom: 50px;
-  text-align: center;
-  border: 1px solid #e6e6e6;
-  height: 200px;
-  position: relative;
-  background: #fafafa;
-}*/
-
-
 
 .service-content {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15vh;
   padding-bottom: 10vh;
-  background-color: black;
+  background: #0a0908;
   }
 
 .service-content .left-text {
@@ -814,15 +816,60 @@ section {
 }
 
 .service-content .left-text h4 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 500;
   color: #fff;
 
 }
 
-h4, .h4 {
-  font-size: 18px;
+
+@media only screen and (min-width: 1440px) {
+  .service-content .left-text h4 {
+    font-size: 28px;
+    font-weight: 600;
 }
+.service-content .left-text p {
+  font-size: 18px
+}
+.service-content {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+  h4, .h4 {
+    font-size: 22px;
+}
+ .ser {
+    margin-left: 150px;
+  }
+  .album {
+  width: 100%;
+}
+.mus {
+  width: 1600px;
+}
+}
+
+ @media only screen and (min-width: 2000px) {
+  .service-content .left-text h4 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-right: 20px;
+  }
+.service-content {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+  h4, .h4 {
+    font-size: 24px;
+}
+  .ser {
+    margin-left: 200px;
+  }
+.mus {
+  width: 1700px;
+  }
+}
+
 
 .service-content .left-text .line-dec {
   width: 45px;
@@ -833,6 +880,16 @@ h4, .h4 {
 
 .service-content .left-text p {
   color: #fff;
+}
+
+
+ @media only screen and (min-width: 2000px) {
+.service-content .left-text p {
+  font-size: 20px;
+}
+.album {
+  width: 100%;
+}
 }
 
 .service-content .left-text ul {
@@ -859,16 +916,21 @@ h4, .h4 {
   margin-bottom: 35px;
 }
 
-.service-content .service-item .line-dec {
+.service-content .line-dec {
   width: 45px;
   height: 3px;
   background-color: #ff7d27;
-  margin: 20px auto 15px auto;
-}
+  margin-bottom: 20px;
+ }
 
 .service-item {
   color: white;
   font-weight: 200px;
+  margin: 5px;
+}
+
+.album {
+  width: 80%;
 }
 
 .album:hover {
@@ -926,6 +988,69 @@ h4, .h4 {
 
 h4, .h4 {
   font-size: 18px;
+}
+
+
+@media only screen and (min-width: 1440px) {
+  .service-content .right-text h4 {
+    font-size: 28px;
+    font-weight: 600;
+}
+.service-content .right-text {
+  padding-left: 20px;
+}
+.service-content .right-text p {
+  font-size: 18px;
+}
+.service-content {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+  h4, .h4 {
+    font-size: 22px;
+}
+ .ser {
+    margin-left: 150px;
+  }
+  .album {
+  width: 100%;
+}
+.mus {
+  width: 1200px;
+}
+}
+
+ @media only screen and (min-width: 2000px) {
+  .ser {
+    margin-left: 200px;
+  }
+  .mus {
+  width: 1700px;
+  }
+  .son {
+    width: 1500px;
+  }
+}
+.service-content .right-text {
+  padding-left: 20px;
+}
+  .service-content .right-text h4 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-right: 20px;
+  }
+  .service-content .right-text p {
+  font-size: 20px;
+  margin-right: 20px; 
+}
+.service-content {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+  h4, .h4 {
+    font-size: 24px;
+}
+ 
 }
 
 .service-content .right-text .line-dec {
@@ -1018,206 +1143,111 @@ h4, .h4 {
   border: 2px solid #2dc997;
 }
 
-/* Portfolio Section
+/* Gallery Section
 --------------------------------*/
 #portfolio {
-  background: rgba(52, 59, 64, 0.9);;
-  padding: 80px 0;
+  background: #0a0908;
+  padding: 10px 0;
 }
 
-#portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 auto 25px auto;
-  list-style: none;
-  text-align: center;
-  border-radius: 50px;
-}
-
-#portfolio #portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 12px 18px 14px 18px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  color: #666666;
-  margin: 0 5px 10px 5px;
-  transition: all ease-in-out 0.3s;
-  background: white;
-  border-radius: 4px;
-}
-
-#portfolio #portfolio-flters li:hover, #portfolio #portfolio-flters li.filter-active {
-  color: #fff;
-  background: #2dc997;
-}
-
-#portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
-}
-
-#portfolio .portfolio-item {
-  margin-bottom: 30px;
-  overflow: hidden;
-  border-radius: 5%;
-}
-
-#portfolio .portfolio-item .cover-portfolio img {
+.photos {
   width: 100%;
-}
-
-#portfolio .portfolio-item img {
-  position: relative;
-  height: 300px;
-  top: 0;
-  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-  border-radius: 5px;
-  width: 100%;
+  height: 500px;
+  border: 1px solid yellow;
+  margin: 40px;
 }
 
 
-
-#portfolio .portfolio-item .portfolio-info {
-  opacity: 0;
-  position: absolute;
-  left: 15px;
-  right: 15px;
-  bottom: -50px;
-  z-index: 3;
-  transition: all ease-in-out 0.3s;
-  background: #2dc997;
-  padding: 15px 20px;
-}
-
-#portfolio .portfolio-item .portfolio-info h4 {
-  font-size: 18px;
-  color: #fff;
-  font-weight: 600;
-}
-
-#portfolio .portfolio-item .portfolio-info p {
-  color: #fff;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-#portfolio .portfolio-item .portfolio-info .preview-link, #portfolio .portfolio-item .portfolio-info .details-link {
-  position: absolute;
-  right: 50px;
-  font-size: 24px;
-  top: calc(50% - 18px);
+.photos a {
+  font-family: "myFirstFont";
+  font-size: 30px;
   color: white;
-  transition: ease-in-out 0.3s;
+  text-transform: uppercase;
 }
 
-#portfolio .portfolio-item .portfolio-info .preview-link:hover, #portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #a4ebd4;
+.photos button {
+  margin-top: 50%;
+  margin-left: 33%; 
 }
 
-#portfolio .portfolio-item .portfolio-info .details-link {
-  right: 15px;
+
+@media only screen and (min-width: 1440px) {
+ .portf {
+  width: 1200px;
+  height: 600px;
+  margin-left: -80px;
+ }
+ .photos button {
+  margin-top: 50%;
+  margin-left: 35%; 
+}
 }
 
-#portfolio .portfolio-item:hover img {
-  top: -30px;
+ @media only screen and (min-width: 2000px) {
+.portf {
+  width: 1500px;
+  height: 750px;
+  margin-left: -80px;
+ }
+ .photos button {
+  margin-top: 40%;
+  margin-left: 35%; 
+}
 }
 
-#portfolio .portfolio-item:hover .portfolio-info {
-  opacity: 1;
-  bottom: 0;
+
+
+/*    PRESS SECTION*/
+
+.collapse-content .fa.fa-heart:hover {
+  color: #f44336 !important;
 }
 
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 30px;
+.collapse-content .fa.fa-share-alt:hover {
+  color: #0d47a1 !important;
 }
 
-.portfolio-details .portfolio-details-container {
-  position: relative;
+
+#press .press-row {
+  margin-bottom: 10px;
 }
 
-.portfolio-details .portfolio-details-carousel {
-  position: relative;
-  z-index: 1;
+#press .card {
+  margin-bottom: 10px !important;
 }
 
-.portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
-  margin-top: 5px;
-  text-align: left;
+
+@media only screen and (min-width: 1440px) {
+.press-row {
+ width: 1200px;
+ margin-left: -70px;
 }
 
-.portfolio-details .portfolio-details-carousel .owl-dot {
-  display: inline-block;
-  margin: 0 10px 0 0;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ddd !important;
+.press-title {
+  margin-left: -100px;
+  margin-bottom: 60px;
+  margin-top: 0px;
+}
 }
 
-.portfolio-details .portfolio-details-carousel .owl-dot.active {
-  background-color: #2dc997 !important;
+ @media only screen and (min-width: 2000px) {
+ .press-row {
+  width: 1400px;
+  margin-left: -70px;
+ }
+
+ .press-title {
+  margin-left: -220px;
+  margin-bottom: 60px;
+  margin-top: 0px;
+}
 }
 
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  position: absolute;
-  right: 0;
-  bottom: -70px;
-  background: #fff;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 50px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  width: 50%;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0 0 0 0;
-}
-
-@media (max-width: 768px) {
-  .portfolio-details .portfolio-description h2 {
-    width: 100%;
-  }
-  .portfolio-details .portfolio-info {
-    position: static;
-    margin-top: 30px;
-  }
-}
 
 /* Contact Section
 --------------------------------*/
 #contact {
-  background-image: url(../img/main.jpg);
+  background: #0a0908;
   padding: 80px 0 40px 0;
 }
 
@@ -1273,14 +1303,14 @@ h4, .h4 {
 
 #contact .social-links {
   padding-bottom: 20px;
-  margin-left: 40px; !important 
+  margin-left: 40px !important;  
 }
 
 
 @media (max-width: 768px) {
   #contact .social-links {
     padding-bottom: 20px;
-    margin-left: 0px; !important
+    margin-left: 0px !important;
     }
   } 
 
